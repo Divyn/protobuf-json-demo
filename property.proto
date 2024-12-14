@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Property {
+    string id = 1;             // Unique property ID
+    string type = 2;           // Property type: apartment, plot, villa, etc.
+    string address = 3;        // Address of the property
+    float price = 4;           // Price in USD
+    float size = 5;            // Size in square feet
+    Details details = 6;       // Nested message for additional details
+}
+
+message Details {
+    int32 bedrooms = 1;        // Number of bedrooms
+    int32 bathrooms = 2;       // Number of bathrooms
+    bool furnished = 3;        // Furnished or unfurnished
+    string description = 4;    // Additional description
+}
